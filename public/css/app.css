@@ -6413,11 +6413,11 @@ html, body, #app {
 }
 
 #map {
-  height: 66.66%;
+  height: 50%;
 }
 
 #info {
-  height: 33.33%;
+  height: 50%;
 }
 
 @media (min-width: 768px) {
