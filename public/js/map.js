@@ -25,7 +25,14 @@ function showArrays(event) {
 
             response.data.forEach(item => {
                 let genderString = (item.gender === 1) ? ' aikuisilla ' : ' lapsilla ';
-                deceaseString += '<b>' + item.date + '</b><br> ICD10: ' + item.icd + '<br>'
+
+                let year = item.date.substr(0, 4);
+                let month = item.date.substr(4, 2);
+                let day = item.date.substr(6, 2);
+
+                let readableDate = day + '.' + month + '.' + year;
+
+                deceaseString += '<b>' + readableDate + '</b><br> ICD10: ' + item.icd + '<br>'
                     + genderString + item.lkm + ' tapausta<br>';
             });
 
