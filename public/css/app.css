@@ -6407,10 +6407,9 @@ html, body, #app {
   padding: 0;
 }
 
-#info {
-  /*background: #fff;
-  border: 1px solid red;
-  padding: 20px;*/
+#list {
+  overflow: scroll;
+  max-height: 80%;
 }
 
 #map {

@@ -17,6 +17,7 @@
 
         <div id="info" class="column">
             <p><b>Tautikartta</b><br>Klikkaa aluetta saadaksesi tietoa tautien määristä.</p>
+            <canvas id="myChart" width="100%" height="200" style="display: none;"></canvas>
             <div id="list"></div>
         </div>
 
