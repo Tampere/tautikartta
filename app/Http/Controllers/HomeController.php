@@ -15,20 +15,31 @@ class HomeController extends Controller
             ->with('data', $data);
     }
 
-    public function show($id)
+    public function show($id, $date)
     {
-        $date = '20160101';
-
-        $data = \DB::select( \DB::raw("SELECT date, gender, icd, count(id) as lkm from diseases WHERE date >= :date AND postcode = :postcode group by date, postcode, icd, gender  order by date desc;"),
+        /*$data = \DB::select( \DB::raw("SELECT date, gender, icd, count(id) as lkm from diseases WHERE date >= :date AND postcode = :postcode group by date, postcode, icd, gender  order by date desc;"),*/
+        $data = \DB::select( \DB::raw("SELECT date, gender, icd, count(id) as lkm from diseases WHERE postcode = :postcode group by date, postcode, icd, gender  order by date desc;"),
             array(
                 'postcode' => $id,
-                'date' => $date
+        /*        'date' => $date*/
             )
         );
-
-        /*$icds = Disease::distinct()->select('icd')->where('date', '>=', $date)->where('postcode', $date)->get();*/
-
         return $data;
-        /*return collect($data)->groupBy(['date'])->toArray();*/
+    }
+
+    public function icds($id, $date)
+    {
+        return Disease::distinct()->select('icd')
+            /*->where('date', '>=', $date)*/
+            ->where('postcode', $id)->get();
+    }
+
+    public function chart($id, $icd, $date)
+    {
+        $data = Disease::where('postcode', $id)->where('icd', $icd)->where('date', '>=', $date)->get(['date', 'gender']);
+
+        return $data->groupBy('date');
+        return view('chart')
+            ->with('data', $data);
     }
 }

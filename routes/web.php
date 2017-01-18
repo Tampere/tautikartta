@@ -12,4 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('data/{id}', 'HomeController@show');
+Route::get('data/{id}/{date}', 'HomeController@show');
+Route::get('icds/{id}/{date}', 'HomeController@icds');
+Route::get('chart/{id}/{icd}/{date}', 'HomeController@chart');
