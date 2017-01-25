@@ -1,5 +1,13 @@
 let map, listDiv = document.getElementById('list'), ctx = document.getElementById("myChart");
 
+const ICDCODES = [
+    '',
+    'Influenssa ja influenssan kaltaiset taudit',
+    'Vatsataudit (tai ripuli- oksennustaudit)',
+    'Vesirokko',
+    'Streptokokin aiheuttamat nieluinfektiot ja tulirokko'
+];
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 61.497594, lng: 23.759121},
@@ -9,8 +17,11 @@ function initMap() {
     addPolygons();
 }
 
-function showArrays(event) {
+function translateICD(icd) {
+    return ICDCODES[icd];
+}
 
+function showArrays(event) {
     let deceaseString = '';
     let that = this;
     axios.all([axios.get('data/' + this.data.postinumero + '/20160101'), axios.get('icds/' + this.data.postinumero + '/20160101')])
@@ -20,7 +31,7 @@ function showArrays(event) {
             let icdsString = '';
             icds.data.forEach(function(item) {
                 /*icdsString += '<a href="/chart/' + that.data.postinumero + '/' + item.icd + '/20160101">'+item.icd+'</a>, ';*/
-                icdsString += item.icd+', ';
+                icdsString += '<li>' + translateICD(item.icd) + '</li>';
             });
 
             response.data.forEach(function(item) {
@@ -32,14 +43,12 @@ function showArrays(event) {
 
                 let readableDate = day + '.' + month + '.' + year;
 
-                deceaseString += '<b>' + readableDate + '</b><br> ICD10: ' + item.icd + '<br>'
-                    + genderString + item.lkm + ' tapausta<br>';
+                deceaseString += '<h6 class="title is-6">' + readableDate + '</h6><div class="notification" style="padding-left: 20px">' + translateICD(item.icd) + '<br>'
+                    + genderString + item.lkm + ' tapausta</div>';
             });
 
-            let contentString = '<b>Valittuna postinumeroalue ' + that.data.postinumero + '</b><br><br>' +
-                '<p>Alueella aikavälillä tautiluokkia: ['+icdsString+']</p>' +
-                '<p>'+ deceaseString+'</p>';
-
-            listDiv.innerHTML = contentString;
+            listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue ' + that.data.postinumero + '</h4>' +
+                '<div class="notification is-primary">Alueella aikavälillä tautiluokkia:<br><ul class="tauti-list"> ' + icdsString + '</ul></div>' +
+                '<p>' + deceaseString + '</p>';
         })).catch(function(error) {console.log(error)});
 }
