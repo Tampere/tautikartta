@@ -1,4 +1,4 @@
-let map, listDiv = document.getElementById('list'), ctx = document.getElementById("myChart");
+let mappi, listDiv = document.getElementById('list'), ctx = document.getElementById("myChart");
 
 const ICDCODES = [
     '',
@@ -9,7 +9,7 @@ const ICDCODES = [
 ];
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
+    mappi = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 61.497594, lng: 23.759121},
         zoom: 13
     });
