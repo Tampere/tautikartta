@@ -29,3 +29,10 @@ html, body, #app {
   list-style-type: disc;
   padding-left: 20px;
 }
+
+div#tutka {
+  z-index: 999999;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

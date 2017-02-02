@@ -6431,4 +6431,11 @@ html, body, #app {
   padding-left: 20px;
 }
 
+div#tutka {
+  z-index: 999999;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
 /*# sourceMappingURL=app.css.map */
