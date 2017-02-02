@@ -19,20 +19,25 @@ html, body, #app {
   height: 50%;
 }
 
+img#terveystutkalogo {
+  margin-top: 20px;
+  width: 122px;
+  height: 37px;
+}
+
 @media (min-width: 768px) {
   #map, #info {
     height: 100%;
+  }
+
+  img#terveystutkalogo {
+    margin-top: 20px;
+    width: 244px;
+    height: 75px;
   }
 }
 
 .tauti-list {
   list-style-type: disc;
   padding-left: 20px;
-}
-
-div#tutka {
-  z-index: 999999;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
 }

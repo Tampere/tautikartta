@@ -18,7 +18,8 @@
         <div id="info" class="column">
             <p><b>Tautikartta</b><br>Klikkaa aluetta saadaksesi tietoa tautien määristä.</p>
             <a href="http://inter16.tampere.fi/terveystutka/">
-                <img src="images/terveystutka.png" alt="Terveystutka">
+                <img id="terveystutkalogo" src="images/terveystutka.png" alt="Terveystutka"><br>
+                Terveystutkasta voit etsiä sinua kiinnostavia terveyttä edistäviä palveluja Tampereella.
             </a>
             <div id="list"></div>
         </div>
