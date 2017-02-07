@@ -1,11 +1,28 @@
-let mappi, listDiv = document.getElementById('list'), ctx = document.getElementById("myChart");
+let mappi, listDiv = document.getElementById('list');
 
 const ICDCODES = [
     '',
     'Influenssa ja influenssan kaltaiset taudit',
     'Vatsataudit (tai ripuli- oksennustaudit)',
     'Vesirokko',
-    'Streptokokin aiheuttamat nieluinfektiot ja tulirokko'
+    'Streptokokin aiheuttamat nieluinfektiot ja tulirokko',
+    'Aikuistyypin diabetes'
+];
+
+const MONTHNAMES = [
+    '',
+    'Tammikuu',
+    'Helmikuu',
+    'Maaliskuu',
+    'Huhtikuu',
+    'Toukokuu',
+    'Kesäkuu',
+    'Heinäkuu',
+    'Elokuu',
+    'Syyskuu',
+    'Lokakuu',
+    'Marraskuu',
+    'Joulukuu'
 ];
 
 function initMap() {
@@ -21,25 +38,61 @@ function translateICD(icd) {
     return ICDCODES[icd];
 }
 
-function showArrays(event) {
+function translateMonth(month) {
+    return MONTHNAMES[month];
+}
+
+function lcfirst (str) {
+    str += '';
+    let f = str.charAt(0).toLowerCase();
+    return f + str.substr(1);
+}
+
+function showArrays() {
     let deceaseString = '';
     let that = this;
-    axios.all([axios.get('data/' + this.data.postinumero + '/20160101'), axios.get('icds/' + this.data.postinumero + '/20160101')])
-        .then(axios.spread(function (response, icds) {
+    axios.all(
+        [
+            axios.get('data/' + this.data.postinumero),
+            axios.get('icds/' + this.data.postinumero),
+            axios.get('aggregates/' + this.data.postinumero)
+        ])
+        .then(axios.spread(function (response, icds, aggregates) {
+            console.log(aggregates);
             window.data = response.data;
 
             let icdsString = '';
             icds.data.forEach(function(item) {
-                /*icdsString += '<a href="/chart/' + that.data.postinumero + '/' + item.icd + '/20160101">'+item.icd+'</a>, ';*/
                 icdsString += '<li>' + translateICD(item.icd) + '</li>';
+            });
+
+            let aggregatesString = '', prevYear = 0, prevMonth = 0;
+            aggregates.data.forEach(function(item) {
+                let genderString = (item.gender === 1) ? ' aikuisilla ' : ' lapsilla ';
+
+                if(item.year != prevYear) {
+                    aggregatesString += '<b>' + item.year + '</b><br>';
+                    prevYear = item.year;
+                }
+
+                if(item.month != prevMonth) {
+                    aggregatesString += '<b style="padding-left: 10px;">' + translateMonth(item.month) + '</b><br>';
+                    prevMonth = item.month;
+                }
+
+                aggregatesString += '<div style="padding-left: 20px;">'
+                    + genderString
+                    + lcfirst(translateICD(item.icd))
+                    + ': ' + item.incidences
+                    + ' tapausta</div>';
             });
 
             response.data.forEach(function(item) {
                 let genderString = (item.gender === 1) ? ' aikuisilla ' : ' lapsilla ';
 
                 let year = item.date.substr(0, 4);
-                let month = item.date.substr(4, 2);
-                let day = item.date.substr(6, 2);
+                let month = item.date.substr(5, 2);
+                let day = item.date.substr(8, 2);
 
                 let readableDate = day + '.' + month + '.' + year;
 
@@ -48,7 +101,10 @@ function showArrays(event) {
             });
 
             listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue ' + that.data.postinumero + '</h4>' +
-                '<div class="notification is-primary">Alueella aikavälillä tautiluokkia:<br><ul class="tauti-list"> ' + icdsString + '</ul></div>' +
-                '<p>' + deceaseString + '</p>';
+                '<div class="notification is-primary">Alueella tautiluokkia:<br><ul class="tauti-list"> '
+                + icdsString +
+                '</ul></div>' +
+                '<div class="notification">' + aggregatesString + '</div>' +
+                '<p><b>Kaikki tapaukset:</b><br>' + deceaseString + '</p>';
         })).catch(function(error) {console.log(error)});
 }

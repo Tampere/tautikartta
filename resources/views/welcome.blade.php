@@ -16,16 +16,14 @@
         <div id="map" class="column is-three-quarters"></div>
 
         <div id="info" class="column">
-            <p><b>Tautikartta</b><br>Klikkaa aluetta saadaksesi tietoa tautien määristä.</p>
+            <p><img src="{{asset('images/tampere.jpg')}}" alt="Tampere"><br><b>Tautikartta</b><br></p>
             <a href="http://inter16.tampere.fi/terveystutka/" target="_blank">
                 <img id="terveystutkalogo" src="images/terveystutka.png" alt="Terveystutka"><br>
                 Terveystutkasta voit etsiä sinua kiinnostavia terveyttä edistäviä palveluja Tampereella.
             </a>
             <div id="list"></div>
         </div>
-
     </div>
-
 
         <script src="js/polygons.js"></script>
         <script src="js/app.js"></script>

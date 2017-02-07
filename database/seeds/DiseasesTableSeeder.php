@@ -18,13 +18,13 @@ class DiseasesTableSeeder extends Seeder
         {
             list($date, $gender, $postcode, $icd) = explode(";", $line);
 
-            if(!preg_match('/[0-9]{5}/', $postcode)) {
+            if(!preg_match('/[0-9]{5}/', $postcode) || $postcode < '33100' || $postcode > '34270') {
                 $invalid++;
                 continue;
             }
 
             Disease::create([
-                'date' => $date,
+                'date' => \Carbon\Carbon::createFromFormat('Ymd', $date),
                 'gender' => $gender,
                 'postcode' => $postcode,
                 'icd' => $icd

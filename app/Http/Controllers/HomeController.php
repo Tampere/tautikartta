@@ -8,38 +8,43 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $data = \DB::select( \DB::raw("SELECT date, gender, postcode, icd, count(id) as lkm from diseases WHERE date >= '20170101'  group by date, postcode, icd, gender;"));
-//        $data = \DB::raw('SELECT date, gender, postcode, icd, count(id) as lkm from diseases group by date, postcode, icd, gender;');
-
-        return view('welcome')
-            ->with('data', $data);
+        return view('welcome');
     }
 
-    public function show($id, $date)
+    public function show($id)
     {
-        /*$data = \DB::select( \DB::raw("SELECT date, gender, icd, count(id) as lkm from diseases WHERE date >= :date AND postcode = :postcode group by date, postcode, icd, gender  order by date desc;"),*/
-        $data = \DB::select( \DB::raw("SELECT date, gender, icd, count(id) as lkm from diseases WHERE postcode = :postcode group by date, postcode, icd, gender  order by date desc;"),
-            array(
-                'postcode' => $id,
-        /*        'date' => $date*/
-            )
-        );
+        return Disease::selectRaw('date, gender, postcode, icd, count(id) as lkm')
+            ->where('postcode', $id)
+            ->groupBy('date', 'postcode', 'icd', 'gender')
+            ->get();
+    }
+
+    public function icds($id)
+    {
+        return Disease::distinct()
+            ->select('icd')
+            ->where('postcode', $id)
+            ->get();
+    }
+
+    public function aggregates($id)
+    {
+        $data = Disease::selectRaw('year(date) year,	month(date) month, gender, icd, count(*) incidences')
+            ->where('postcode', $id)
+            ->groupBy('icd', 'gender', 'year', 'month')
+            ->orderBy('year', 'desc')
+            ->orderBy('month', 'desc')
+            ->orderBy('gender', 'desc')
+            ->get();
+
+        /*$data = $data->groupBy('year');
+
+        $data = $data->map(function($item) {
+            return $item->groupBy('month');
+        });*/
+
         return $data;
     }
-
-    public function icds($id, $date)
-    {
-        return Disease::distinct()->select('icd')
-            /*->where('date', '>=', $date)*/
-            ->where('postcode', $id)->get();
-    }
-
-    public function chart($id, $icd, $date)
-    {
-        $data = Disease::where('postcode', $id)->where('icd', $icd)->where('date', '>=', $date)->get(['date', 'gender']);
-
-        return $data->groupBy('date');
-        return view('chart')
-            ->with('data', $data);
-    }
 }
+
+//Disease::selectRaw('year(date) year, month(date) month, gender, icd, count(*) incidences')->where('postcode', 33100)->groupBy('icd', 'gender', 'year', 'month')->orderBy('year', 'desc')->orderBy('month', 'desc')->orderBy('gender', 'desc')->get();
