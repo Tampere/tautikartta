@@ -462,7 +462,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33340.addListener('click', showArrays);
 
 
-    var coords_33380 = [
+    /*var coords_33380 = [
         {lat: 61.476149, lng: 23.574471},
         {lat: 61.477665, lng: 23.58623},
         {lat: 61.480985, lng: 23.584771},
@@ -485,7 +485,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33380.setMap(mappi);
 
 
-    polygon_33380.addListener('click', showArrays);
+    polygon_33380.addListener('click', showArrays);*/
 
 
     var coords_33400 = [
@@ -599,7 +599,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33420.addListener('click', showArrays);
 
 
-    var coords_33430 = [
+    /*var coords_33430 = [
         {lat: 61.525846, lng: 23.571854},
         {lat: 61.531206, lng: 23.567905},
         {lat: 61.53857, lng: 23.570395},
@@ -631,9 +631,9 @@ var addPolygons = function() {var coords_33100 = [
 
 
     polygon_33430.addListener('click', showArrays);
+*/
 
-
-    var coords_33450 = [
+    /*var coords_33450 = [
         {lat: 61.55043, lng: 23.636656},
         {lat: 61.557053, lng: 23.643522},
         {lat: 61.566576, lng: 23.638372},
@@ -667,10 +667,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33450.setMap(mappi);
 
 
-    polygon_33450.addListener('click', showArrays);
+    polygon_33450.addListener('click', showArrays);*/
 
 
-    var coords_33470 = [
+    /*var coords_33470 = [
         {lat: 61.541392, lng: 23.571939},
         {lat: 61.540942, lng: 23.561468},
         {lat: 61.53857, lng: 23.531427},
@@ -717,9 +717,9 @@ var addPolygons = function() {var coords_33100 = [
 
 
     polygon_33470.addListener('click', showArrays);
+*/
 
-
-    var coords_33480 = [
+    /*var coords_33480 = [
         {lat: 61.576424, lng: 23.550224},
         {lat: 61.582592, lng: 23.549366},
         {lat: 61.59072, lng: 23.544645},
@@ -763,7 +763,7 @@ var addPolygons = function() {var coords_33100 = [
 
 
     polygon_33480.addListener('click', showArrays);
-
+*/
 
     var coords_33500 = [
         {lat: 61.51631, lng: 23.794026},
@@ -1446,7 +1446,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33870.addListener('click', showArrays);
 
 
-    var coords_33880 = [
+    /*var coords_33880 = [
         {lat: 61.433268, lng: 23.765402},
         {lat: 61.424812, lng: 23.80291},
         {lat: 61.414711, lng: 23.814411},
@@ -1474,7 +1474,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33880.setMap(mappi);
 
 
-    polygon_33880.addListener('click', showArrays);
+    polygon_33880.addListener('click', showArrays);*/
 
 
     var coords_33900 = [
@@ -1516,7 +1516,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33900.addListener('click', showArrays);
 
 
-    var coords_33920 = [
+    /*var coords_33920 = [
         {lat: 61.443855, lng: 23.707981},
         {lat: 61.453414, lng: 23.699741},
         {lat: 61.455875, lng: 23.693991},
@@ -1545,10 +1545,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33920.setMap(mappi);
 
 
-    polygon_33920.addListener('click', showArrays);
+    polygon_33920.addListener('click', showArrays);*/
 
 
-    var coords_33950 = [
+    /*var coords_33950 = [
         {lat: 61.458745, lng: 23.685665},
         {lat: 61.468545, lng: 23.673434},
         {lat: 61.488299, lng: 23.662405},
@@ -1580,10 +1580,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33950.setMap(mappi);
 
 
-    polygon_33950.addListener('click', showArrays);
+    polygon_33950.addListener('click', showArrays);*/
 
 
-    var coords_33960 = [
+   /* var coords_33960 = [
         {lat: 61.422719, lng: 23.70369},
         {lat: 61.413808, lng: 23.682575},
         {lat: 61.40625, lng: 23.683777},
@@ -1627,10 +1627,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33960.setMap(mappi);
 
 
-    polygon_33960.addListener('click', showArrays);
+    polygon_33960.addListener('click', showArrays);*/
 
 
-    var coords_33980 = [
+    /*var coords_33980 = [
         {lat: 61.407195, lng: 23.631506},
         {lat: 61.402635, lng: 23.592968},
         {lat: 61.394089, lng: 23.570995},
@@ -1672,10 +1672,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_33980.setMap(mappi);
 
 
-    polygon_33980.addListener('click', showArrays);
+    polygon_33980.addListener('click', showArrays);*/
 
 
-    var coords_34110 = [
+    /*var coords_34110 = [
         {lat: 61.59072, lng: 23.544645},
         {lat: 61.592353, lng: 23.521557},
         {lat: 61.604111, lng: 23.486366},
@@ -1707,10 +1707,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_34110.setMap(mappi);
 
 
-    polygon_34110.addListener('click', showArrays);
+    polygon_34110.addListener('click', showArrays);*/
 
 
-    var coords_34130 = [
+   /* var coords_34130 = [
         {lat: 61.641477, lng: 23.536663},
         {lat: 61.646695, lng: 23.576488},
         {lat: 61.652034, lng: 23.577003},
@@ -1740,10 +1740,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_34130.setMap(mappi);
 
 
-    polygon_34130.addListener('click', showArrays);
+    polygon_34130.addListener('click', showArrays);*/
 
 
-    var coords_34140 = [
+   /* var coords_34140 = [
         {lat: 61.662425, lng: 23.489971},
         {lat: 61.684987, lng: 23.48568},
         {lat: 61.698826, lng: 23.495293},
@@ -1781,10 +1781,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_34140.setMap(mappi);
 
 
-    polygon_34140.addListener('click', showArrays);
+    polygon_34140.addListener('click', showArrays);*/
 
 
-    var coords_34150 = [
+   /* var coords_34150 = [
         {lat: 61.708753, lng: 23.511429},
         {lat: 61.726403, lng: 23.496666},
         {lat: 61.733233, lng: 23.507309},
@@ -1828,10 +1828,10 @@ var addPolygons = function() {var coords_33100 = [
     polygon_34150.setMap(mappi);
 
 
-    polygon_34150.addListener('click', showArrays);
+    polygon_34150.addListener('click', showArrays);*/
 
 
-    var coords_34180 = [
+   /* var coords_34180 = [
         {lat: 61.753306, lng: 23.616314},
         {lat: 61.761998, lng: 23.615284},
         {lat: 61.767845, lng: 23.653049},
@@ -1867,7 +1867,7 @@ var addPolygons = function() {var coords_33100 = [
     polygon_34180.setMap(mappi);
 
 
-    polygon_34180.addListener('click', showArrays);
+    polygon_34180.addListener('click', showArrays);*/
 
 
     var coords_34240 = [
