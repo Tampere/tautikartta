@@ -16,7 +16,7 @@ class CreateDiseasesTable extends Migration
         Schema::create('diseases', function (Blueprint $table) {
             $table->increments('id');
             $table->string('date');
-            $table->integer('gender');
+            $table->integer('agegroup');
             $table->integer('postcode');
             $table->integer('icd');
             $table->timestamps();

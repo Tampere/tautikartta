@@ -16,7 +16,7 @@ class DiseasesTableSeeder extends Seeder
         $invalid = 0;
         foreach (file('database/seeds/diag.csv') as $line)
         {
-            list($date, $gender, $postcode, $icd) = explode(";", $line);
+            list($date, $agegroup, $postcode, $icd) = explode(";", $line);
 
             if(!preg_match('/[0-9]{5}/', $postcode) || $postcode < '33100' || $postcode > '34270') {
                 $invalid++;
@@ -24,8 +24,8 @@ class DiseasesTableSeeder extends Seeder
             }
 
             Disease::create([
-                'date' => \Carbon\Carbon::createFromFormat('Ymd', $date),
-                'gender' => $gender,
+                'date' => \Carbon\Carbon::createFromFormat('Ymd H:i:s', $date . ' 00:00:00'),
+                'agegroup' => $agegroup,
                 'postcode' => $postcode,
                 'icd' => $icd
             ]);

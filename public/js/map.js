@@ -68,7 +68,7 @@ function showArrays() {
 
             let aggregatesString = '', prevYear = 0, prevMonth = 0;
             aggregates.data.forEach(function(item) {
-                let genderString = (item.gender === 1) ? ' aikuisilla ' : ' lapsilla ';
+                let genderString = (item.agegroup === 1) ? ' aikuisilla ' : ' lapsilla ';
 
                 if(item.year != prevYear) {
                     aggregatesString += '<b>' + item.year + '</b><br>';
@@ -84,11 +84,12 @@ function showArrays() {
                     + genderString
                     + lcfirst(translateICD(item.icd))
                     + ': ' + item.incidences
-                    + ' tapausta</div>';
+                    + ' käyntiä</div>';
             });
 
+            let oldDate = '';
             response.data.forEach(function(item) {
-                let genderString = (item.gender === 1) ? ' aikuisilla ' : ' lapsilla ';
+                let genderString = (item.agegroup === 1) ? ' aikuisilla ' : ' lapsilla ';
 
                 let year = item.date.substr(0, 4);
                 let month = item.date.substr(5, 2);
@@ -96,8 +97,13 @@ function showArrays() {
 
                 let readableDate = day + '.' + month + '.' + year;
 
-                deceaseString += '<h6 class="title is-6">' + readableDate + '</h6><div class="notification" style="padding-left: 20px">' + translateICD(item.icd) + '<br>'
-                    + genderString + item.lkm + ' tapausta</div>';
+                if(readableDate !== oldDate) {
+                    deceaseString += '<h6 class="title is-6">' + readableDate + '</h6>';
+                    oldDate = readableDate;
+                }
+
+                deceaseString += '<div class="notification" style="padding-left: 20px">' + translateICD(item.icd) + '<br>'
+                    + genderString + item.lkm + ' käyntiä</div>';
             });
 
             listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue ' + that.data.postinumero + '</h4>' +

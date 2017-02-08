@@ -16,7 +16,10 @@
         <div id="map" class="column is-three-quarters"></div>
 
         <div id="info" class="column">
-            <p><img src="{{asset('images/tampere.jpg')}}" alt="Tampere"><br><b>Tautikartta</b><br></p>
+            <p>
+                <a href="http://www.tampere.fi"><img src="{{asset('images/tampere.jpg')}}" alt="Tampere"></a><br>
+                <b>Tautikartta</b><br>
+            </p>
             <a href="http://inter16.tampere.fi/terveystutka/" target="_blank">
                 <img id="terveystutkalogo" src="images/terveystutka.png" alt="Terveystutka"><br>
                 Terveystutkasta voit etsiä sinua kiinnostavia terveyttä edistäviä palveluja Tampereella.
