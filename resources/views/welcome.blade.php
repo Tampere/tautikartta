@@ -84,7 +84,7 @@
 
         <script src="js/polygons.js?v=2"></script>
         <script src="js/app.js?v=2"></script>
-        <script src="js/map.js?v=2"></script>
+        <script src="js/map.js?v=3"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMIU-6eqyhh0yH9OO77qiWSdsokw8DGEc&callback=initMap" async defer></script>
     </body>
 </html>
