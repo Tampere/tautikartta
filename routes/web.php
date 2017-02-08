@@ -15,3 +15,6 @@ Route::get('/', 'HomeController@index');
 Route::get('data/{id}', 'HomeController@show');
 Route::get('icds/{id}', 'HomeController@icds');
 Route::get('aggregates/{id}', 'HomeController@aggregates');
+
+Route::get('chart', 'ChartController@index');
+Route::get('chart/{id}', 'ChartController@show');
