@@ -8,7 +8,7 @@
         <title>Tautikartta</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/app.css?v=1">
     </head>
     <body>
 
@@ -82,9 +82,9 @@
         </div>
     </div>
 
-        <script src="js/polygons.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/map.js"></script>
+        <script src="js/polygons.js?v=1"></script>
+        <script src="js/app.js?v=1"></script>
+        <script src="js/map.js?v=1"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMIU-6eqyhh0yH9OO77qiWSdsokw8DGEc&callback=initMap" async defer></script>
     </body>
 </html>
