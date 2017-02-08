@@ -105,7 +105,7 @@ function showArrays() {
                     + genderString + item.lkm + ' käyntiä</div>';
             });
 
-            listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue ' + that.data.postinumero + '</h4>' +
+            listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue <a href="/chart/' + that.data.postinumero + '">' + that.data.postinumero + '</a></h4>' +
                 '<div class="notification is-primary">Alueella tautiluokkia:<br><ul class="tauti-list"> '
                 + icdsString +
                 '</ul></div>' +
