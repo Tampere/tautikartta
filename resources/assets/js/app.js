@@ -11,11 +11,11 @@ const modal = document.getElementById("modal");
 const btnOpen = document.getElementById("openInfo");
 const btnClose = document.getElementById("closeBtn");
 
-btnOpen.onclick = function() {
+btnOpen.onmousedown = function() {
     modal.style.display = "block";
 };
 
-btnClose.onclick = function() {
+btnClose.onmousedown = function() {
     modal.style.display = "none";
 };
 
