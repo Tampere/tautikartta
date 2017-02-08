@@ -18,6 +18,7 @@ class HomeController extends Controller
             ->where('postcode', $id)
             ->where('date', '>=', Carbon::createFromFormat('Y-m-d H:i:s', '2016-12-01 00:00:00'))
             ->groupBy('date', 'postcode', 'icd', 'agegroup')
+            ->orderBy('date', 'desc')
             ->get();
     }
 

@@ -58,7 +58,6 @@ function showArrays() {
             axios.get('aggregates/' + this.data.postinumero)
         ])
         .then(axios.spread(function (response, icds, aggregates) {
-            console.log(aggregates);
             window.data = response.data;
 
             let icdsString = '';
