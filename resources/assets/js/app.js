@@ -7,14 +7,22 @@
 
 require('./bootstrap');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-/*
+const modal = document.getElementById("modal");
+const btnOpen = document.getElementById("openInfo");
+const btnClose = document.getElementById("closeBtn");
 
-const app = new Vue({
-    el: '#info'
-});
+btnOpen.onclick = function() {
+    modal.style.display = "block";
+};
+
+btnClose.onclick = function() {
+    modal.style.display = "none";
+};
+
+/*
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
 */

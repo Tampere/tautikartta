@@ -6442,4 +6442,12 @@ img#terveystutkalogo {
   padding-left: 20px;
 }
 
+.tauti-list a {
+  color: #fff;
+}
+
+.modal-content {
+  background: #fff;
+}
+
 /*# sourceMappingURL=app.css.map */

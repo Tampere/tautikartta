@@ -2,11 +2,11 @@ let mappi, listDiv = document.getElementById('list');
 
 const ICDCODES = [
     '',
-    'Influenssa ja influenssan kaltaiset taudit',
-    'Vatsataudit (tai ripuli- oksennustaudit)',
-    'Vesirokko',
-    'Streptokokin aiheuttamat nieluinfektiot ja tulirokko',
-    'Aikuistyypin diabetes'
+    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00570&p_hakusana=influenssa">Influenssa ja influenssan kaltaiset taudit</a>',
+    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00608&p_hakusana=ripulin%20hoito%20%20">Vatsataudit (tai ripuli- oksennustaudit)</a>',
+    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00550">Vesirokko</a>',
+    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00530&p_hakusana=tulirokko">Streptokokin aiheuttamat nieluinfektiot ja tulirokko</a>',
+    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin diabetes</a>'
 ];
 
 const MONTHNAMES = [
