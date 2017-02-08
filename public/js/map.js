@@ -68,7 +68,7 @@ function showArrays() {
 
             let aggregatesString = '', prevYear = 0, prevMonth = 0;
             aggregates.data.forEach(function(item) {
-                let genderString = (item.agegroup === 1) ? ' aikuisilla ' : ' lapsilla ';
+                let genderString = (item.agegroup === 2) ? ' aikuisilla ' : ' lapsilla ';
 
                 if(item.year != prevYear) {
                     aggregatesString += '<b>' + item.year + '</b><br>';
@@ -89,7 +89,7 @@ function showArrays() {
 
             let oldDate = '';
             response.data.forEach(function(item) {
-                let genderString = (item.agegroup === 1) ? ' aikuisilla ' : ' lapsilla ';
+                let genderString = (item.agegroup === 2) ? ' aikuisilla ' : ' lapsilla ';
 
                 let year = item.date.substr(0, 4);
                 let month = item.date.substr(5, 2);
