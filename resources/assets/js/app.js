@@ -25,4 +25,5 @@ window.addEventListener("popstate", function(event) {
     if(window.location.hash != "#info") {
         modal.style.display = "none";
     }
-});
+}, false);
+window.history.pushState({}, "", window.location.toString());
