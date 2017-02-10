@@ -27,7 +27,7 @@
                     -koodistoista.</p>
 
                 <div class="notification is-primary">
-                    <p>Seurattavat tautiluokat ovat:
+                    <p>Seurattavat tautiluokat ovat:</p>
                     <ul class="tauti-list">
                         <li>
                             <a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00570&p_hakusana=influenssa">Influenssa
@@ -44,7 +44,6 @@
                             <a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin
                                 diabetes</a></li>
                     </ul>
-                    </p>
                 </div>
 
                 <p>Haluttua postinumeroaluetta kartalta klikkaamalla saa raportin viimeaikaisista seurattavien

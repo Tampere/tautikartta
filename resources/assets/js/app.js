@@ -8,6 +8,8 @@ const btnClose = document.getElementById("closeBtn");
 btnOpen.onmousedown = function() {
     modal.style.display = "block";
     window.location.hash = "info";
+    console.log("addstate");
+    console.log(window.location.hash);
 };
 
 btnClose.onmousedown = function() {
