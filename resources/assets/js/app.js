@@ -29,3 +29,9 @@ window.addEventListener("popstate", function(event) {
     }
 }, false);
 window.history.pushState({}, "", window.location.toString());
+if (typeof window.onbeforeunload != 'undefined'){
+    function doNothing(){
+        console.log('Prevent BF Cache');
+    }
+    window.onbeforeunload = doNothing;
+}
