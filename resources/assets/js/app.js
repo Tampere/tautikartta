@@ -14,7 +14,14 @@ btnClose.onmousedown = function() {
     modal.style.display = "none";
 };
 
+window.addEventListener('statechange', function(event) {
+    console.log("statechange");
+    console.log(window.location.hash);
+});
+
 window.addEventListener("popstate", function(event) {
+    console.log("popstate");
+    console.log(window.location.hash);
     if(window.location.hash != "#info") {
         modal.style.display = "none";
     }
