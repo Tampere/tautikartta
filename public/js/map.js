@@ -2,11 +2,11 @@ let mappi, listDiv = document.getElementById('list');
 
 const ICDCODES = [
     '',
-    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00570&p_hakusana=influenssa">Influenssa ja influenssan kaltaiset taudit</a>',
-    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00608&p_hakusana=ripulin%20hoito%20%20">Vatsataudit (tai ripuli- oksennustaudit)</a>',
-    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00550">Vesirokko</a>',
-    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00530&p_hakusana=tulirokko">Streptokokin aiheuttamat nieluinfektiot ja tulirokko</a>',
-    '<a href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin diabetes</a>'
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00570&p_hakusana=influenssa">Influenssa ja influenssan kaltaiset taudit</a>',
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00608&p_hakusana=ripulin%20hoito%20%20">Vatsataudit (tai ripuli- oksennustaudit)</a>',
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00550">Vesirokko</a>',
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00530&p_hakusana=tulirokko">Streptokokin aiheuttamat nieluinfektiot ja tulirokko</a>',
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin diabetes</a>'
 ];
 
 const MONTHNAMES = [
@@ -105,7 +105,7 @@ function showArrays() {
                     + genderString + item.lkm + ' käyntiä</div>';
             });
 
-            listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue <a href="/chart/' + that.data.postinumero + '">' + that.data.postinumero + '</a></h4>' +
+            listDiv.innerHTML = '<h4 class="title is-4">Valittuna postinumeroalue <a target="_blank" href="/chart/' + that.data.postinumero + '">' + that.data.postinumero + '</a></h4>' +
                 '<div class="notification is-primary">Alueella tautiluokkia:<br><ul class="tauti-list"> '
                 + icdsString +
                 '</ul></div>' +

@@ -1,10 +1,4 @@
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * include Vue and Vue Resource. This gives a great starting point for
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 const modal = document.getElementById("modal");
@@ -13,16 +7,15 @@ const btnClose = document.getElementById("closeBtn");
 
 btnOpen.onmousedown = function() {
     modal.style.display = "block";
+    window.location.hash = "info";
 };
 
 btnClose.onmousedown = function() {
     modal.style.display = "none";
 };
 
-/*
-window.onclick = function(event) {
-    if (event.target == modal) {
+window.addEventListener("popstate", function(event) {
+    if(window.location.hash != "#info") {
         modal.style.display = "none";
     }
-};
-*/
+});
