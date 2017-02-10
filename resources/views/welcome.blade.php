@@ -18,7 +18,7 @@
             <header class="modal-card-head">
                 <p class="modal-card-title">Mikä on Tampereen tautikartta?</p>
             </header>
-            <section class="modal-card-body">
+            <section class="modal-card-body" style="max-height: 200px;">
                 <p>Tampereen kaupunki kehittää konseptia, jolla tiettyjen tautiluokkien esiintyvyyttä voidaan esittää
                     internetissä kansalaisille.</p>
 
