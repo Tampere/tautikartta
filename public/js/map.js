@@ -6,7 +6,8 @@ const ICDCODES = [
     '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00608&p_hakusana=ripulin%20hoito%20%20">Vatsataudit (tai ripuli- oksennustaudit)</a>',
     '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00550">Vesirokko</a>',
     '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00530&p_hakusana=tulirokko">Streptokokin aiheuttamat nieluinfektiot ja tulirokko</a>',
-    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin diabetes</a>'
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin diabetes</a>',
+    '<a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00139">Klamydia</a>'
 ];
 
 const MONTHNAMES = [

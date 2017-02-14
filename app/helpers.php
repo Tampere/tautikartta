@@ -7,7 +7,8 @@ function translateICD($icd)
         'Vatsataudit (tai ripuli- oksennustaudit)',
         'Vesirokko',
         'Streptokokin aiheuttamat nieluinfektiot ja tulirokko',
-        'Aikuistyypin diabetes'
+        'Aikuistyypin diabetes',
+        'Klamydia'
     ];
     return $ICDCODES[$icd];
 }

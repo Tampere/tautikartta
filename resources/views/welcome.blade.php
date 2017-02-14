@@ -43,6 +43,8 @@
                         <li>
                             <a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00775&p_hakusana=aikuisi%C3%A4n%20diabetes%20">Aikuistyypin
                                 diabetes</a></li>
+                        <li>
+                            <a target="_blank" href="http://www.terveyskirjasto.fi/terveyskirjasto/tk.koti?p_artikkeli=dlk00139">Klamydia</a></li>
                     </ul>
                 </div>
 
