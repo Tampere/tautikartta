@@ -2,7 +2,7 @@
 
 @section('content')
     <h1 class="title is-1">Tautikartta kaavioina</h1>
-    <p>Valittuna postinumeroalue <b>{{$postcode}}</b></p>
+    <p>Valittuna postinumeroalue: <b>{{$postcode == 'all' ? 'Kaikki postinumeroalueet' : $postcode}}</b></p>
     <p>Tarksteltava ajanjakso: <b>1.1.2016 - 31.12.2016</b></p>
     <p><a href="/chart">Vaihda postinumeroaluetta</a></p>
     <div class="columns">
@@ -28,6 +28,26 @@
         const ctx_{{$icd}} = document.getElementById("shart-{{$icd}}");
         new Chart(ctx_{{$icd}}, {
             type: 'bar',
+            /*options: {
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Kuukausi'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            stepValue: 1,
+                            steps: 1,
+                            max: {{$max}}
+                        }
+                    }]
+                },
+            },*/
             data: {
                 labels: [
                     'Tammikuu',

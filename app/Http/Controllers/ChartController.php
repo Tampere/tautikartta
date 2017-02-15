@@ -19,16 +19,7 @@ class ChartController extends Controller
 
     public function show($id)
     {
-        /*$start = Carbon::createFromFormat('Y-m-d H:i:s', '2016-01-01 00:00:00');
-        $end = Carbon::createFromFormat('Y-m-d H:i:s', '2016-12-31 59:59:59');*/
-
-        $data = Disease::selectRaw('month(date) month, agegroup, icd, count(id) as lkm')
-            ->wherePostcode($id)
-            ->where('date', '>=', '2016-01-01 00:00:00')
-            ->where('date', '<=', '2016-12-31 59:59:59')
-            ->groupBy('month', 'icd', 'agegroup')
-            ->orderBy('date', 'desc')
-            ->get();
+        $data = Disease::monthlyCounts($id);
 
         if($data->count() < 1) {
             return 'Ei dataa valitulla postinumerolla.';
@@ -41,6 +32,7 @@ class ChartController extends Controller
 
         return view('chart.show')
             ->with('postcode', $id)
-            ->with('data', $arr);
+            ->with('data', $arr)
+            ->with('max', $data->max('lkm'));
     }
 }
