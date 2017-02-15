@@ -18,3 +18,7 @@ Route::get('aggregates/{id}', 'HomeController@aggregates');
 
 Route::get('chart', 'ChartController@index');
 Route::get('chart/{id}', 'ChartController@show');
+
+Route::get('v1', 'ApiController@index');
+Route::get('v1/postcodes', 'ApiController@postcodes');
+Route::get('v1/{id}', 'ApiController@show');
