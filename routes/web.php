@@ -22,3 +22,8 @@ Route::get('chart/{id}', 'ChartController@show');
 Route::get('v1', 'ApiController@index');
 Route::get('v1/postcodes', 'ApiController@postcodes');
 Route::get('v1/{id}', 'ApiController@show');
+
+Auth::routes();
+
+Route::get('admin', 'AdminController@index');
+Route::post('admin', 'AdminController@store');

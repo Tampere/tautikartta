@@ -6449,4 +6449,16 @@ img#terveystutkalogo {
   background: #fff;
 }
 
+div#varoitus {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: red;
+  color: white;
+  font-weight: bold;
+  z-index: 9999999;
+  text-align: center;
+}
+
 /*# sourceMappingURL=app.css.map */

@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Disease;
+use App\Warning;
 use Carbon\Carbon;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $warning = Warning::first();
+        return view('welcome')
+            ->with('warning', $warning->text);
     }
 
     public function show($id)
@@ -45,5 +48,3 @@ class HomeController extends Controller
         return $data;
     }
 }
-
-//Disease::selectRaw('year(date) year, month(date) month, agegroup, icd, count(*) incidences')->where('postcode', 33100)->groupBy('icd', 'agegroup', 'year', 'month')->orderBy('year', 'desc')->orderBy('month', 'desc')->orderBy('agegroup', 'desc')->get();
