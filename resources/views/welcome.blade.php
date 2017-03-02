@@ -8,7 +8,7 @@
         <title>Tautikartta</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="css/app.css?v=1">
+        <link rel="stylesheet" href="css/app.css?v=2">
     </head>
     <body>
 
