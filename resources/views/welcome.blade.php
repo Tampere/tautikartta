@@ -75,7 +75,7 @@
         @endif
         <div id="map" class="column is-three-quarters"></div>
 
-        <div id="info" class="column">
+        <div id="info" class="column" style="{{strlen($warning) > 1 ? 'padding-top: 25px': ''}}">
             <p>
                 <a href="http://www.tampere.fi"><img src="{{asset('images/tampere.jpg')}}" alt="Tampere"></a><br>
                 <b>Tautikartta</b> (<span id="openInfo" style="cursor: pointer; border-bottom: 1px solid blue;">Tietoa tautikartasta</span>)<br>
@@ -83,7 +83,8 @@
             <a href="http://inter16.tampere.fi/terveystutka/" target="_blank">
                 <img id="terveystutkalogo" src="images/terveystutka.png" alt="Terveystutka"><br>
                 Terveystutkasta voit etsiä sinua kiinnostavia terveyttä edistäviä palveluja Tampereella.
-            </a>
+            </a><br>
+            <a href="https://www.thl.fi/fi/web/infektiotaudit/ajankohtaista/infektiouutiset/">THL:n infektiouutiset</a>
             <div id="list"></div>
         </div>
     </div>
