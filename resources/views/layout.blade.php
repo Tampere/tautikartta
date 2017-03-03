@@ -7,7 +7,7 @@
 
     <title>Tautikartta</title>
 
-    <link rel="stylesheet" href="{{asset('css/app.css?v=1')}}">
+    <link rel="stylesheet" href="{{asset('css/app.css?v=2')}}">
 </head>
 <body>
 

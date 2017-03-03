@@ -51,6 +51,56 @@ img#terveystutkalogo {
 }
 
 div#varoitus {
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 100%;
+  background: red;
+  color: white;
+  font-weight: bold;
+  z-index: 9999999;
+  text-align: center;
+}
+div#varoitus h3 {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  line-height: 20px;
+  font-weight:bold;
+  text-align: center;
+  -moz-transform:translateX(110%);
+  -webkit-transform:translateX(110%);
+  transform:translateX(110%);
+  -moz-animation: scroller 20s linear infinite;
+  -webkit-animation: scroller 20s linear infinite;
+  animation: scroller 20s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroller {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroller {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroller {
+  0%   {
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%);
+  }
+}
+
+/*
+div#varoitus {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -60,4 +110,4 @@ div#varoitus {
   font-weight: bold;
   z-index: 9999999;
   text-align: center;
-}
+}*/

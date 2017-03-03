@@ -69,7 +69,9 @@
 
     <div id="app" class="columns">
         @if(strlen($warning) > 1)
-            <div id="varoitus">{{$warning}}</div>
+            <div id="varoitus">
+                <h3>{{$warning}}</h3>
+            </div>
         @endif
         <div id="map" class="column is-three-quarters"></div>
 
