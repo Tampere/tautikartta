@@ -84,7 +84,7 @@
                 <img id="terveystutkalogo" src="images/terveystutka.png" alt="Terveystutka"><br>
                 Terveystutkasta voit etsiä sinua kiinnostavia terveyttä edistäviä palveluja Tampereella.
             </a><br>
-            <a href="https://www.thl.fi/fi/web/infektiotaudit/ajankohtaista/infektiouutiset/">THL:n infektiouutiset</a>
+            <a href="https://www.thl.fi/fi/web/infektiotaudit/ajankohtaista/infektiouutiset/" target="_blank">THL:n infektiouutiset</a>
             <div id="list"></div>
         </div>
     </div>
