@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         $warning = Warning::first();
         return view('welcome')
-            ->with('warning', $warning->text);
+            ->with('warning', $warning->text ?? '');
     }
 
     public function show($id)
